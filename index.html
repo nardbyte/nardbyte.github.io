@@ -1,71 +1,112 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Professional Web Design Service</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nardbyte - Soluciones empresariales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
+        html, body {
+        color: #fff;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         }
 
-        h1 {
-            color: #333;
-            text-align: center;
+        .content {
+        position: relative;
+        z-index: 1;
+        padding: 50px;
         }
 
-        p {
-            color: #666;
-            text-align: center;
-            margin-bottom: 30px;
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
         }
 
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-            transition-duration: 0.4s;
-        }
-
-        .button:hover {
-            background-color: #45a049;
-        }
-
-        .github-icon {
-            vertical-align: middle;
-            margin-right: 5px;
+        .video-container video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 
 <body>
-    <h1>Professional Web Design Service</h1>
-
-    <p>Welcome to our professional web design service. We specialize in creating visually appealing and user-friendly
-        websites that meet your business needs.</p>
-
-    <div class="button-container">
-        <a class="button" href="mailto:your-email@example.com">Contact Us</a>
+    <div class="video-container">
+        <video autoplay muted loop>
+            <source src="assets/video/bg.mp4" type="video/mp4">
+        </video>
     </div>
 
-    <div class="button-container">
-        <a class="button" href="https://github.com/your-github-repo" target="_blank">
-            <img class="github-icon" src="https://example.com/github-icon.png" alt="GitHub Icon">GitHub Repository
-        </a>
+    <div class="content text-center">
+        <h1>Nardbyte</h1>
+        <p>Desarrollo empresarial y soluciones tecnológicas</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Contáctenos
+        </button>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col">
+                    <a href="https://github.com/nardbyte/" class="btn btn-secondary"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form name="contact" netlify>
+                        <div class="modal-body">
+                        
+                            <p>
+                                <label>Nombre <input type="text" name="name" /></label>
+                            </p>
+                            <p>
+                                <label>Correo <input type="email" name="email" /></label>
+                            </p>     
+                            <p>
+                                <label>Cuentanos que necesitas <input type="asunto" name="asunto" /></label>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                           
+                            <button type="button" class="btn btn-primary" type="submit">Enviar</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
